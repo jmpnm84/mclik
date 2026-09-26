@@ -1,0 +1,72 @@
+    <!DOCTYPE html>
+    <html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mestre Click - Configuração</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <style>
+            /* Aumentamos a largura para 800px para as instruções ficarem mais largas */
+            .config-container { max-width: 800px; margin: 50px auto; }
+            .instruction-box { 
+                background: #f8f9fa; 
+                border: 1px solid #dee2e6;
+                border-left: 5px solid #007bff; 
+                padding: 20px; 
+                margin-top: 25px; 
+                border-radius: 4px;
+            }
+            .instruction-box h6 { color: #007bff; margin-bottom: 15px; }
+            .instruction-box ul li { margin-bottom: 10px; line-height: 1.5; }
+            code { background: #e9ecef; padding: 2px 5px; border-radius: 3px; color: #d63384; }
+        </style>
+    </head>
+    <body class="bg-light">
+        <div class="container">
+            <div class="card shadow config-container">
+                <div class="card-body p-4">
+                    <h3 class="text-center mb-4">Mestre Click - Painel de Controlo</h3>
+                    
+                    <form method="POST">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label><b>MoodleSession ID</b></label>
+                                    <input type="text" name="session_id" class="form-control" placeholder="Cole o token do cookie aqui..." required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label><b>Lista de IDs</b></label>
+                                    <input type="text" name="lista_ids" class="form-control" placeholder="Ex: 101, 102, 103..." required>
+                                    <small class="text-muted">IDs separados por vírgulas.</small>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block btn-lg mt-2">Iniciar Simulação</button>
+                    </form>
+
+                    <div class="instruction-box">
+                        <h6><i class="fas fa-info-circle"></i> <b>Como configurar o acesso corretamente:</b></h6>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li><b>1. Login:</b> Entre na plataforma Moodle normalmente no seu navegador.</li>
+                                    <li><b>2. Inspecionar:</b> Clique com o botão direito na página e escolha "Inspecionar" (ou pressione <code>F12</code>).</li>
+                                    <li><b>3. Cookies:</b> Vá ao separador <b>Aplicaçao</b> (Application) -> <b>Cookies</b> no menu lateral esquerdo.</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul>
+                                    <li><b>4. Copiar:</b> Procure o nome <code>MoodleSession</code>. Clique duas vezes no valor (uma sequência de letras e números) e copie.</li>
+                                    <li><b>5. IDs:</b> Vá aos tópicos que deseja e copie o número que aparece no fim do link: <code>discuss.php?d=XXXX</code>.</li>
+                                    <li><b>6. Executar:</b> Cole os dados acima e clique em Iniciar.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+    
